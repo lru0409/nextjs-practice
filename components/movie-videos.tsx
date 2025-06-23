@@ -1,7 +1,6 @@
 import { API_URL } from '../app/(home)/page';
 
 async function getVideos(id: string) {
-  await new Promise((resolve) => setTimeout(resolve, 5000)); // Simulate a delay
   const response = await fetch(`${API_URL}/${id}/videos`);
   const json = await response.json();
   return json;
